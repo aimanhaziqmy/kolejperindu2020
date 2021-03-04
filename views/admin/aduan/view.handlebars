@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <a href="/admin/aduan" class="btn btn-secondary mb-2 btn-block text-white"><i class="fas fa-reply"></i>&nbsp;Kembali</a>
+    <div class="card">
+        <div class='card-header'>
+            <h2>E-Aduan Kolej Perindu</h2>
+        </div>
+    </div>
+    <div class='card mt-2'>
+        <div class='card-header'>
+            <h4>{{aduan.tajuk}}</h4>
+            <small>{{aduan.tarikh}}</small>
+        </div>
+        <div class="card-body">
+            <h5>Penerangan : </h5>
+            <p>{{aduan.penerangan}}<br></p>
+            <h5 class="mt-2">Ringkasan Pengadu :</h5>
+            <p>{{aduan.ringkasanPengadu}}</p>
+            <div class="p-2 bg-secondary text-white">
+            <h5>Gambar *Jika ada :</h5>
+            <p class="mt-2">Gambar Pertama :<br></p>
+            <img class="img-fluid" style="max-height:500px" src={{aduan.gambar1}}>
+            <p class="mt-2">Gambar Kedua :<br></p>
+            <img class="img-fluid" style="max-height:500px" src={{aduan.gambar2}}>
+            <p class="mt-2">Gambar Ketiga :<br></p>
+            <img class="img-fluid" style="max-height:500px" src={{aduan.gambar3}}>
+            </div>
+        </div>
+
+    </div>
+</div>

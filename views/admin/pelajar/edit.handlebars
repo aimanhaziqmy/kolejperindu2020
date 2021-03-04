@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <a href="/admin/pelajar" class="btn btn-secondary mb-2 btn-block text-white"><i class="fas fa-reply"></i>&nbsp;Kembali</a>
+    <div class="card">
+        <div class="card-header">
+            <h3>Kemaskini rekod pelajar</h3>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <form method="post" action="/admin/pelajar/kemaskini/{{pelajar._id}}?newMethod=PUT" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <textarea id="nama" name="nama" placeholder="Nama" class="form-control" rows="1" required>{{pelajar.nama}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="noMatrik">Nombor Matrik</label>
+                    <textarea id="noMatrik" name="noMatrik" placeholder="Nombor Matrik" rows="1" class="form-control">{{pelajar.noMatrik}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="noBilik">Nombor Bilik</label>
+                    <textarea id="noBilik" name="noBilik" placeholder="Nombor Bilik" class="form-control">{{pelajar.noBilik}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="blokPerindu">Blok Perindu</label>
+                    <textarea id="blokPerindu" name="blokPerindu" placeholder="Blok Perindu" class="form-control">{{pelajar.blokPerindu}}</textarea>
+                </div>
+                <button type='submit' class='btn btn-primary btn-block'>Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

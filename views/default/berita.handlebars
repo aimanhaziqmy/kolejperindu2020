@@ -1,0 +1,84 @@
+ <!-- your content here -->
+ <div class="container topspace">
+     <div class="page-desc mt-4">
+         <h3 class="text-center"><span class="badge badge-danger">BERITA</span></h3>
+         <h1 class="text-center">Berita Perindu</h1>
+         <p class="text-center">Ketahui perkembangan semasa</p>
+     </div>
+     <div class="container pb-3">
+         <div class="mt-5 mb-5">
+             <div class="row">
+                 <div class="col-md-9">
+                     <div class="row berita-items">
+                         <!--Dummy Data-->
+                         {{#each berita}}
+                             <div class="col-md-6 item">
+                                 <div class="component">
+                                     <div class="card h-100">
+                                         <div class="card-header">
+                                             <img class="card-img" src={{gambar}} alt="berita">
+                                         </div>
+                                         <div class="card-body">
+                                             <span class="badge badge-secondary">Berita</span>
+                                             <h4 class="card-title mt-2">{{tajuk}}</h4>
+                                             <p class="card-text">{{penerangan}} </p>
+                                         </div>
+                                         <div class="card-footer">
+                                             <a href="/berita/{{_id}}"  class="btn btn-outline-primary">Lebih Lanjut</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         {{/each}}
+                         <!--Dummy Data-->
+                     </div>
+
+                     <div class="d-flex justify-content-center mt-4">
+                         <nav aria-label="Page pagination">
+                             <ul class="pagination">
+                                 <li class="page-item prev"><span class="btn btn-secondary page-link text-white">&laquo;</span>
+                                 </li>
+                                 <li class="page-item"><span class="page-link btn btn-seconday-outline text-secondary">Page&nbsp;<span class="num"></span></span></li>
+                                 <li class="page-item next"><span class="btn btn-secondary text-white page-link">&raquo;</span></li>
+                             </ul>
+                         </nav>
+                     </div>
+                 </div>
+                 <div class="col-md-3">
+                     <div class="linker">
+                         <div class="component">
+                             <div class="card text-center news-content">
+                                 <div class="card-header">
+                                     <i class="far fa-newspaper fa-3x"></i>
+                                     <h4>Pautan Berita UITM Hub</h4>
+                                 </div>
+                                 <div class="card-body">
+                                     <a href="https://news.uitm.edu.my/" title="go to uitm news hub" class="btn btn-lg btn-outline-primary">UITM News Hub</a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="component">
+                         <div class="card text-center news-content">
+                             <div class="card-body">
+                                 <h4>Kategori</h4>
+                                 <span class="badge badge-danger">Luar Kolej</span>
+                                 <span class="badge badge-danger">Aktiviti</span>
+                                 <span class="badge badge-danger">Pertandingan</span>
+                                 <span class="badge badge-danger">Akademik</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="btn-group dropup stickymenu">
+     <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fas fa-align-right"></i>
+     </button>
+     <div class="dropdown-menu">
+         <a class="dropdown-item" href="#topPage">To Top</a>
+     </div>
+ </div>

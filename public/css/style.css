@@ -1,0 +1,551 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 86vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url("hello.mp4") black no-repeat center center scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}
+
+.topspace {
+    padding-top: 6.5%;
+}
+
+.crimson {
+    background: #DC143C;
+}
+
+.perindu-background-home {
+    padding-top: 22%;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.site-title {
+    color: white;
+    margin-top: ;
+    margin-bottom: 1%;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 60px;
+}
+
+.site-desc {
+    color: white;
+    position: absolute;
+    font-size: 24px;
+    margin-bottom: 1%;
+    font-family: 'Fjalla One', sans-serif;
+
+}
+
+.pstand {
+    height: 30px;
+    padding-bottom: 65%;
+}
+
+.news-content {
+    margin-top: 3%;
+}
+
+.news-content .component .card {
+    height: 100%;
+    margin: 1%;
+}
+
+footer p,
+footer h5 {
+    color: white;
+}
+
+footer i {
+    color: white;
+}
+
+
+.copyright-section {
+    text-decoration: none !important;
+    text-align: center;
+}
+
+.copyright-section a {
+    cursor: pointer;
+}
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.show .dropdown-menu {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/*Aktiviti carousel*/
+.aktiviti-carousel img {
+    border-radius: 8px;
+}
+
+.aktiviti-carousel h5,
+.aktiviti-carousel .carousel-caption p {
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+/*This is for sticky button located at right bottom*/
+.stickymenu {
+    position: fixed;
+    top: 85%;
+    left: 85%;
+    margin: 2%;
+    z-index: 9997;
+}
+
+.stickyadmin {
+    position: fixed;
+    top: 15%;
+    margin: 2%;
+    z-index: 999;
+}
+
+/*Kata kunci admin special*/
+.darkside {
+    color: white;
+    padding: 5px 15px;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+/*slideanim*/
+
+.slideanim {
+    visibility: hidden;
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    -moz-animation-name: slide;
+    -ms-animation-name: slide;
+    -o-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    visibility: visible;
+}
+
+
+
+/*For non-mobile websites only*/
+@media screen and (min-width:769px) {
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        max-height: 500px;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    #imejBerita {
+        height: 500px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+/*For medium-large websites*/
+@media screen and (max-width:1024px) {
+    .topspace {
+        padding-top: 8.5%;
+    }
+}
+
+/*For Tablets responsiveness*/
+@media screen and (max-width:768.5px) {
+    .nav-mobile {
+        display: inline-block;
+    }
+
+    .topspace {
+        padding-top: 12.5%;
+    }
+
+    .perindu-background-home {
+        padding-top: 35%;
+    }
+
+    .perindu-background-home .site-title {
+        font-size: 45px;
+    }
+
+    .perindu-background-home .site-desc {
+        font-size: 22px;
+    }
+
+    .pstand {
+        padding-bottom: 70%;
+    }
+}
+
+/*For mobile phone responsiveness*/
+@media screen and (max-width:426px) {
+    .topspace {
+        padding-top: 25%;
+    }
+
+    .perindu-background-home {
+        padding-top: 90%;
+    }
+
+    .perindu-background-home .site-title {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .perindu-background-home .site-desc {
+
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .pstand {
+        padding-bottom: 110%;
+    }
+
+    .stickymenu {
+        position: fixed;
+        top: 90%;
+        left: 80%;
+        margin: 2%;
+    }
+}
+
+/*Animation*/
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-moz-keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-ms-keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-o-keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.navbar {
+    z-index: 9999;
+}
+
+.carousel-inner img {
+    width: 100%;
+}
+
+.item.hide {
+    display: none;
+}
+
+.item.show {
+    display: block;
+    animation: show .5s ease;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.next,
+prev {
+    cursor: pointer
+}
+
+.pagination .prev.disable,
+.pagination .next.disable {
+    color: gray;
+    pointer-events: none;
+}
+
+.showprogress {
+    display: block;
+}
+
+.hideprogress {
+    display: none;
+}
+
+.alerts {
+    width: 50%;
+}
+
+.alert .progress-bar {
+    animation: progression 100s ease;
+    -webkit-animation: progression 100s ease;
+    -moz-animation: progression 100s ease;
+    -o-animation: progression 100s ease;
+    -ms-transition: progression 100s ease;
+}
+
+@keyframes progression {
+    0% {
+        width: 0%;
+    }
+
+    2% {
+        width: 40%;
+    }
+
+    4% {
+        width: 50%;
+    }
+
+    6% {
+        width: 90%;
+    }
+
+    10% {
+        width: 100%
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes progression {
+    0% {
+        width: 0%;
+    }
+
+    2% {
+        width: 40%;
+    }
+
+    4% {
+        width: 50%;
+    }
+
+    6% {
+        width: 90%;
+    }
+
+    10% {
+        width: 100%
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-moz-keyframes progression {
+    0% {
+        width: 0%;
+    }
+
+    2% {
+        width: 40%;
+    }
+
+    4% {
+        width: 50%;
+    }
+
+    6% {
+        width: 90%;
+    }
+
+    10% {
+        width: 100%
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-o-keyframes progression {
+    0% {
+        width: 0%;
+    }
+
+    2% {
+        width: 40%;
+    }
+
+    4% {
+        width: 50%;
+    }
+
+    6% {
+        width: 90%;
+    }
+
+    10% {
+        width: 100%
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-ms-keyframes progression {
+    0% {
+        width: 0%;
+    }
+
+    2% {
+        width: 40%;
+    }
+
+    4% {
+        width: 50%;
+    }
+
+    6% {
+        width: 90%;
+    }
+
+    10% {
+        width: 100%
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .alerts {
+        width: 75%;
+    }
+}
+
+.wrapper {}
+
+.greywrap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    opacity: 0.5;
+}

@@ -1,0 +1,22 @@
+<div class= "container-fluid position-absolute" style="top:15%; opacity:0.9; z-index:9999;">
+
+{{#if success_message}}
+
+<div class="alert alert-success alert-dismissable fade show mt-2 auto-hide" role="alert">
+    <strong>{{success_message}}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+
+{{/if}}
+
+
+{{#if error_message}}
+
+<div class="alert alert-danger alert-dismissable fade show mt-2 auto-hide" role="alert">
+    <strong>{{error_message}}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+
+{{/if}}
+
+</div>

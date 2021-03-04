@@ -1,0 +1,34 @@
+ <!-- your content here -->
+ <div class="container topspace">
+     <div class="page-desc mt-4">
+         <h3 class="text-center"><span class="badge badge-danger">BERITA</span></h3>
+         <h1 class="text-center">Berita Perindu</h1>
+         <p class="text-center">Ketahui perkembangan semasa</p>
+     </div>
+
+     <div class="mt-5 mb-5">
+
+
+         <h1>{{berita.tajuk}}</h1>
+
+         <small class="text-info"><i class="far fa-clock"></i>&nbsp;{{berita.tarikh}}</small>
+         <hr />
+         <div class="p-2 mb-3">
+             <img id="imejBerita" class="rounded img-fluid" src={{berita.gambar}}></div>
+         <h4>{{berita.penerangan}}</h4>
+         <hr />
+         <div>{{{berita.kandungan}}}</div>
+         <hr />
+         <a class="btn btn-secondary" href="/berita">Kembali&nbsp;&nbsp;<i class="fas fa-arrow-left"></i></a>
+     </div>
+
+ </div>
+
+ <div class="btn-group dropup stickymenu">
+     <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fas fa-align-right"></i>
+     </button>
+     <div class="dropdown-menu">
+         <a class="dropdown-item" href="#topPage">To Top</a>
+     </div>
+ </div>

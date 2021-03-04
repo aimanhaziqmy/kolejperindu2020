@@ -1,0 +1,71 @@
+<div class="container-fluid">
+    <a href="/admin/mb" class="btn btn-secondary mb-2 btn-block text-white"><i class="fas fa-reply"></i>&nbsp;Kembali</a>
+    <div class="card">
+        <div class="card-header">
+            <h3>Kemaskini Majlis Bertindak Kolej Perindu</h3>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form method="post" action="/admin/mb/kemaskini/{{mb._id}}?newMethod=PUT" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <textarea id="nama" name="nama" placeholder="Nama" class="form-control" rows="1" required>{{mb.nama}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="penerangan">Pengenalan Diri</label>
+                    <textarea id="penerangan" name="pengenalan" placeholder="penerangan" class="form-control">{{mb.penerangan}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="noTelefon">Nombor Telefon</label>
+                    <textarea id="noTelefon" name="noTelefon" placeholder="noTelefon" rows="1" class="form-control">{{mb.noTelefon}}</textarea>
+                </div>
+                <div class='p-2 text-body'>
+                    <p>Majlis Bertindak Bahagian :</p>
+                    <div class='form-check form-check-inline'>
+                        <input type="checkbox" id='multimedia' name="multimedia" class="form-check-input" value={{mb.multimedia}}>
+                        <label class="form-check-label" for="multimedia">Multimedia</label>
+                    </div>
+                    <div class='form-check form-check-inline'>
+                        <input type="checkbox" id='majlisProtokol' name="majlisProtokol" class="form-check-input" value={{mb.majlisProtokol}}>
+                        <label class="form-check-label" for="majlisProtokol">Majlis dan Protokol</label>
+                    </div>
+                    <div class='form-check form-check-inline'>
+                        <input type="checkbox" id='taskForce' name="taskForce" class="form-check-input" value={{mb.taskForce}}>
+                        <label class="form-check-label" for="taskForce">Task Force</label>
+                    </div>
+                    <div class='form-check form-check-inline'>
+                        <input type="checkbox" id='rakanSurau' name="rakanSurau" class="form-check-input" value={{mb.rakanSurau}}>
+                        <label class="form-check-label" for="rakanSurau">Rakan Surau</label>
+                    </div>
+                    <div class='form-check form-check-inline'>
+                        <input type="checkbox" id='sekretariat' name="sekretariat" class="form-check-input" value={{mb.sekretariat}}>
+                        <label class="form-check-label" for="sekretariat">Sekretariat</label>
+                    </div>
+                    <div class='form-check form-check-inline'>
+                        <input type="checkbox" id='keusahawanan' name="keusahawanan" class="form-check-input" value={{mb.keusahawanan}}>
+                        <label class="form-check-label" for="keusahawanan">Keusahawanan</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="jawatan">Jawatan</label>
+                    <textarea id="jawatan" name="jawatan" placeholder="jawatan" class="form-control">{{mb.jawatan}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instagram">Instagram</label>
+                    <textarea id="instagram" name="instagram" placeholder="instagram" class="form-control">{{mb.instagram}}</textarea>
+                </div>
+                <div class='form-group'>
+                    <label for="harijadi">Tarikh Lahir</label>
+                    <input type="date" id="harijadi" name="harijadi" placeholder="harijadi" class="form-control" value={{mb.harijadi}}>
+                </div>
+                <div class="form-group">
+                    <label for="kataHikmah">Kata-kata Hikmah</label>
+                    <textarea id="kataHikmah" name="kataHikmah" placeholder="Kata-kata Hikmah" class="form-control">{{mb.kataHikmah}}</textarea>
+                </div>
+                <button type='submit' class='btn btn-primary btn-block'>Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

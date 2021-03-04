@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    
+    <a href="/admin/aktiviti" class="btn btn-secondary mb-2 btn-block text-white"><i class="fas fa-reply"></i>&nbsp;Kembali</a>
+    <div class="card">
+        <div class='card-header'>
+            <h3>Aktiviti Baharu</h3>
+        </div>
+    </div>
+
+    <div class='card'>
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="tajuk">Tajuk</label>
+                    <input type="text" placeholder="Tajuk" name="tajuk" id="tajuk" class='form-control' required>
+                </div>
+                <div class="form-group">
+                    <label for="penerangan">Penerangan</label>
+                    <input type="text" placeholder="Penerangan" name="penerangan" id="penerangan" class="form-control" required>
+                </div>
+                <div class='form-check'>
+                    <input type="checkbox" id='diakses' name="diakses" class="form-check-input" checked>
+                    <label class="form-check-label" for="bolehDilihat">Boleh diakses?</label>
+                </div>
+                <div class="form-group">
+                    <label for="kataLaluan1">Kata Laluan Pertama</label>
+                    <input type="text" placeholder="Kata Laluan Pertama" name="kataLaluan1" id="kataLaluan1" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="penerangan">Kata Laluan Kedua</label>
+                    <input type="text" placeholder="Kata Laluan Kedua" name="kataLaluan2" id="kataLaluan2" class="form-control" required>
+                </div>
+                <button class='btn btn-block btn-primary' type='submit'> Hantar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<!-- your content here -->
+<div class="container topspace">
+    <div class="page-desc mt-4">
+        <h3 class="text-center"><span class="badge badge-danger">E-Aktiviti</span></h3>
+        <h1 class="text-center">Daftar Aktiviti Online</h1>
+        <p class="text-center">Selamat Datang ke E-Aktiviti Kolej Perindu</p>
+    </div>
+</div>
+<div class="container">
+    <div class="component pb-3">
+        {{#each aktiviti}}
+            {{#if diakses}}
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>{{tajuk}}</h2>
+                        <p>{{penerangan}}<br>
+                            <small class="text-info">{{tarikh}}</small></p>
+                        <p class="lead">Lengkapkan semua maklumat anda di bawah.</p>
+                    </div>
+                    <div class="card-body">
+                        <form id="aktiviti" method="post">
+                            <div class="form-group">
+                                <label for="nomatrik">Nombor Matrik</label>
+                                <input type="text" class="form-control" name='noMatrik' id="nomatrik" placeholder="No. Matrik" required>
+                                <input type="hidden" name="id" value={{_id}}>
+                                <textarea type="hidden" style="display:none;" name="tajuk">{{tajuk}}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordone">Kata Laluan Aktiviti Pertama</label>
+                                <input type="text" name="kataLaluan1" class="form-control" id="passwordone" placeholder="Kata Laluan Pertama" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordtwo">Kata Laluan Aktiviti Kedua</label>
+                                <input type="text" name="kataLaluan2" class="form-control" id="passwordtwo" placeholder="Kata Laluan Kedua" required>
+                            </div>
+                            <button type="ProgressionStart()" value="verify" class="btn btn-block btn-primary" aria-describedby="infos">Hantar</button>
+                            <small id="infos" clas="form-text text-info">Pastikan maklumat diisi lengkap dan betul.</small>
+                        </form>
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+</div>
+<div class="btn-group dropup stickymenu">
+    <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-right"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#topPage">To Top</a>
+    </div>
+</div>
+<script>
+    aktiviti.onsubmit = function() {
+        Progression();
+        Wrapping();
+    }
+
+</script>

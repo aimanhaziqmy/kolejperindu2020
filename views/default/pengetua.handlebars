@@ -1,0 +1,38 @@
+<!-- your content here -->
+<div class="container topspace">
+    <div class="page-desc mt-4">
+        <h3 class="text-center"><span class="badge badge-danger">KOLEJ</span></h3>
+        <h1 class="text-center">Pengetua</h1>
+    </div>
+</div>
+<div class="container pb-3">
+    {{#each pengetua}}
+        <div class="biodata mt-5 mb-5">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="rounded img-fluid mx-auto d-block" src={{gambar}}>
+                </div>
+                <div class="col-sm-6 pt-3">
+                    <h5>{{nama}}</h5>
+                    <p>{{pengenalan}}</p>
+                    <p><i class="fas fa-birthday-cake"></i>&nbsp;&nbsp;{{harijadi}}<br>
+                        <i class="fab fa-instagram"></i>&nbsp;&nbsp;{{instagram}}<br>
+                        <i class="fab fa-whatsapp"></i>&nbsp;&nbsp;{{noTelefon}}</p>
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{kataHikmah}}</p>
+                        <footer class="blockquote-footer">{{nama}} <cite title="Source Title">Pengetua Kolej Perindu</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+<div class="btn-group dropup stickymenu">
+    <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-right"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#topPage">To Top</a>
+    </div>
+</div>

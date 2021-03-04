@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h3>E-Aduan Kolej Perindu</h3>
+        </div>
+    </div>
+    <table data-toggle='table' data-search="true" data-pagination="true" data-show-columns="true">
+        <thead>
+            <tr>
+                <th data-field="tajuk" data-sortable="true">Tajuk</th>
+                <th data-field="penerangan" data-sortable="true">Penerangan</th>
+                <th data-field="ringkasanPengadu" data-sortable="true">Ringkasan Pengadu</th>
+                <th data-field="tarikh" data-sortable="true">Tarikh</th>
+                <th data-field="gambar1" data-sortable="true">Gambar Pertama</th>
+                <th data-field="gambar2" data-sortable="true">Gambar Kedua</th>
+                <th data-field="gambar3" data-sortable="true">Gambar Ketiga</th>
+
+                <th>Tindakan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each aduan}}
+                <tr>
+                    <td>{{tajuk}}</td>
+                    <td>{{penerangan}}</td>
+                    <th>{{ringkasanPengadu}}</th>S
+                    <td>{{tarikh}}</td>
+                    <td><img src={{gambar1}} class="img-fluid" alt="Gambar aduan Kolej Perindu"></td>
+                    <th><img src={{gambar2}} class="img-fluid" alt="Gambar aduan Kolej Perindu"></th>
+                    <th><img src={{gambar3}} class="img-fluid" alt="Gambar aduan Kolej Perindu"></th>
+
+                    <td>
+                        <a href="/admin/aduan/{{_id}}" class="btn btn-block btn-primary">Lihat &rarr;</a>
+                        <form class="m-2" action="/admin/aduan/padam/{{_id}}?newMethod=DELETE" method="post">
+                            <button onclick="return confirm('Adakah anda ingin memadam kandungan ini?');" type="submit" class="btn btn-danger btn-block">Padam</button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

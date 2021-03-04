@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Aktiviti Perindu</h3>
+        </div>
+    </div>
+    <a href="/admin/aktiviti/baharu" class="btn btn-primary mt-2 mb-2 btn-block text-white"><i class="fas fa-plus-circle"></i>&nbsp;Tambah Maklumat</a>
+    <table data-toggle='table' data-search="true" data-pagination="true" data-show-columns="true">
+        <thead>
+            <tr>
+                <th data-field="tajuk" data-sortable="true">Tajuk</th>
+                <th data-field="penerangan" data-sortable="true">Penerangan</th>
+                <th data-field="bilanganPeserta" data-sortable="true">Bilangan Peserta</th>
+                <th data-field="kataLaluan1" data-sortable="true">Kata Laluan Pertama</th>
+                <th data-field="kataLaluan2" data-sortable="true">Kata Laluan Kedua</th>
+                <th data-field="dibuka" data-sortable="true">Dibuka</th>
+
+                <th data-field="tarikh" data-sortable="true">Tarikh</th>
+                <th>Tindakan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each aktiviti}}
+                <tr>
+                    <td>{{tajuk}}</td>
+                    <td>{{penerangan}}</td>
+                    <td>{{rekods.length}}</td>
+                    <td>{{kataLaluan1}}</td>
+                    <td>{{kataLaluan2}}</td>
+                    <td class="text-center">{{diakses}}<br>
+                        <!--Modal-->
+                        <form action="/admin/aktiviti/diakses/{{_id}}?newMethod=PUT" method="post">
+                            <div class='form-check'>
+                                {{#if diakses}}
+                                    <input type="checkbox" id='diakses' name="diakses" class="form-check-input" value={{diakses}} checked>
+                                {{else}}
+                                    <input type="checkbox" id='diakses' name="diakses" class="form-check-input" value={{diakses}} >
+                                {{/if}}
+                                <label class="form-check-label" for="bolehDilihat">Akses</label>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Tukar</button>
+                        </form>
+                    </td>
+
+                    <td>{{tarikh}}</td>
+                    <td><a class="btn btn-block btn-warning m-2" href="/admin/aktiviti/kemaskini/{{_id}}">Kemaskini</a>
+                        <form class="m-2" action="/admin/aktiviti/padam/{{_id}}?newMethod=DELETE" method="post">
+                            <button onclick="return confirm('Adakah anda ingin memadam kandungan ini?');" type="submit" class="btn btn-danger btn-block">Padam</button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

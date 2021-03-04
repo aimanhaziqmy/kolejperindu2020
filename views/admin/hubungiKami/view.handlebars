@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h3>Mesej</h3>
+        </div>
+    </div>
+    <table data-toggle='table' data-search="true" data-pagination="true" data-show-columns="true">
+        <thead>
+            <tr>
+                <th data-field="nama" data-sortable="true">Nama</th>
+                <th data-field="email" data-sortable="true">Email</th>
+                <th data-field="tarikh" data-sortable="true">Tarikh</th>
+                <th data-field="noTelefon" data-sortable="true">Nombor Telefon</th>
+                <th data-field="pertanyaan" data-sortable="true">Pertanyaan</th>
+                <th>Tindakan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each hubungi}}
+                <tr>
+                    <td>{{nama}}</td>
+                    <td>{{email}}</td>
+                    <td>{{tarikh}}</td>
+                    <td>{{noTelefon}}</td>
+                    <th>{{pertanyaan}}</th>
+                    <td>
+                         <form class="m-2" action="/admin/hubungiKami/padam/{{_id}}?newMethod=DELETE" method="post">
+                            <button onclick="return confirm('Adakah anda ingin memadam kandungan ini?');" type="submit" class="btn btn-danger btn-block">Padam</button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,55 @@
+<!-- your content here -->
+<div class="container topspace">
+    <div class="page-desc mt-4">
+        <h3 class="text-center"><span class="badge badge-danger">HUBUNGI KAMI</span></h3>
+        <h1 class="text-center">Hubungi Kami</h1>
+        <p class="text-center">Kami akan menghubungi anda dalam masa terdekat</p>
+    </div>
+</div>
+<div class="container pb-3">
+    <div class="component">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center mt-3"><i class="fas fa-headset"></i>&nbsp;</h1>
+                <h5 class="text-center">Sila isi semua maklumat yang perlu bagi memudahkan urusan</h5>
+            </div>
+            <div class="card-body">
+                <form id="hubungi" method="post">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" placeholder="Nama" class="form-control" aria-describedby="namainfo" name="nama" required>
+                        <small id="namainfo" class="form-text text-info">Perlu diisi</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="email" class="form-control" aria-describedby="emailinfo" name="email" required>
+                        <small id="emailinfo" class="form-text text-info">Perlu diisi</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon">Nombor Telefon</label>
+                        <input type="text" id="telefon" placeholder="No. Telefon" class="form-control" aria-describedby="telefoninfo" name="noTelefon" required>
+                        <small id="telefoninfo" class="form-text text-info">Perlu diisi</small>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="pertanyaan" placeholder="Ada sebarang pertanyaan ?" name="pertanyaan" class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-outline-primary">Hantar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn-group dropup stickymenu">
+    <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-right"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#topPage">To Top</a>
+    </div>
+</div>
+<script>
+    hubungi.onsubmit = function(){
+        Progression();
+        Wrapping();
+    }
+</script>

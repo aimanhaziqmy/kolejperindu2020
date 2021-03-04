@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <a href="/admin/berita" class="btn btn-secondary mb-2 btn-block text-white"><i class="fas fa-reply"></i>&nbsp;Kembali</a>
+    <div class="card">
+        <div class='card-header'>
+            <h3>Kemaskini Berita</h3>
+        </div>
+    </div>
+
+    <div class='card'>
+        <div class="card-body">
+            <form action="/admin/berita/kemaskini/{{berita._id}}?newMethod=PUT" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="tajuk">Tajuk</label>
+                    <textarea placeholder="Tajuk" name="tajuk" id="tajuk" class='form-control' rows="1" required>{{berita.tajuk}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="penerangan">Penerangan</label>
+                    <textarea placeholder="Penerangan" name="penerangan" id="penerangan" class="form-control" required>{{berita.penerangan}}</textarea>
+                </div>
+                <div class='form-check'>
+                    <input type="checkbox" id='bolehDilihat' name="bolehDilihat" class="form-check-input" value={{berita.bolehDilihat}}>
+                    <label class="form-check-label" for="bolehDilihat">Boleh dilihat ?</label>
+                </div>
+                <div class='form-group'>
+                    <label for='kandungan'>Kandungan</label>
+                    <textarea id='kandungan' rows="15" class='form-control' name='kandungan' required>{{{berita.kandungan}}}</textarea>
+                </div>
+                <button class='btn btn-block btn-primary' type='submit'> Kemaskini Berita</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#kandungan').summernote({
+            height: 300, //set editable area's height
+            codemirror: { // codemirror options
+                theme: 'monokai'
+            }
+        });
+    });
+  </script>

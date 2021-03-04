@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <!--Util.js for carousel-->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/umd/util.js"></script>
+      <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/36db8c3629.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/lazy.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body id="topPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+      <!--navbar top-->
+    <nav class="navbar navbar-expand-lg navbar-dark crimson fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="static%20pictures/logo%20perindu.png" alt="Example Navbar 1" class="mr-2" height="50">Perindu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-1" aria-controls="navbarNavDropdown-1"
+      aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse text-center" id="navbarNavDropdown-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#a" id="kolej" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="kolej1">Kolej
+                        </a>
+                        <div class="dropdown-menu" id="kolej2" aria-labelledby="kolej">
+                            <a class="dropdown-item" href="pengetua.html">Pengetua</a>
+                            <a class="dropdown-item" href="pengurus%20asrama%20kanan.html">Pengurus Asrama Kanan</a>
+                            <a class="dropdown-item" href="akan-datang.html">Staf Residen Kolej</a>
+                            <a class="dropdown-item" href="visi-misi-objektif.html">Visi, Misi dan Objektif</a>
+                            <a class="dropdown-item" href="carta-organisasi.html">Carta Organisasi</a>
+                            <a class="dropdown-item" href="akan-datang.html">Staf</a>
+                            <a class="dropdown-item" href="akan-datang.html">SRK</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#a" id="mahasiswa" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mahasiswa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="mahasiswa">
+                            <a class="dropdown-item" href="jpkperindu.html">JPK Perindu</a>
+                            <a class="dropdown-item" href="majlisbertindak.html">Majlis Bertindak</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#a" id="akademik" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akademik
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="akademik">
+                            <a class="dropdown-item" href="akan-datang.html">Fakulti</a>
+                            <a class="dropdown-item" href="akan-datang.html">Kalendar Akademik</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#a" id="alumnidanjaringan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alumni
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="alumnidanjaringan">
+                            <a class="dropdown-item" href="akan-datang.html">Alumni Website</a>
+                            <a class="dropdown-item" href="akan-datang.html">E-Borang Alumni</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#a" id="eborang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">E-Borang
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="eborang">
+                            <a class="dropdown-item" href="akan-datang.html">E-Usahawan</a>
+                            <a class="dropdown-item" href="e-aduan.html">E-Aduan</a>
+                            
+                            <a class="dropdown-item" href="semakmerit.html">Semak Merit</a>
+                            <a class="dropdown-item" href="takwim.html">Takwim Aktiviti</a>
+                            <a class="dropdown-item btn btn-danger btn-pill" href="e-aktiviti.html">E-Aktiviti</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="berita.html">Berita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" title="Hubungi Kami" href="hubungi-kami.html"><i class="fas fa-headset"></i><span class="nav-mobile">&nbsp;&nbsp;Hubungi Kami</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" title="Admin" href="login.html"><i class="fas fa-user-lock"></i><span class="nav-mobile">&nbsp;&nbsp;Admin</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- your content here -->
+    <div class="container topspace">
+        <div class="page-desc mt-5">
+            <h3 class="text-center"><span class="badge badge-danger">BERITA</span></h3>
+            <h1 class="text-center">Berita Perindu</h1>
+            <p class="text-center">Ketahui perkembangan semasa</p>
+        </div>
+        <div class="container">
+            <div class="mt-5 mb-5">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="component">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <img class="card-img" src="https://images.pexels.com/photos/3854615/pexels-photo-3854615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="aktiviti">
+                                        </div>
+                                        <div class="card-body">
+                                            <span class="badge badge-danger">Aktiviti</span>
+                                            <h4 class="card-title mt-2">Perindu's Ramadhan with SYAMEL</h4>
+                                            <p class="card-text">Dengan berbesar hati, barisan Jawatankuasa Perwakilan Kolej Perindu Untuk Bersama-sama menyeru warga perindu dalam Perindu's Ramadhan with Syameel</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#a" class="btn btn-outline-primary">Lebih Lanjut</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!--Dummy Data-->
+                <div class="col-md-6">
+                    <div class="component">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <img class="card-img" src="https://images.pexels.com/photos/715134/pexels-photo-715134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="berita">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge badge-secondary">Berita</span>
+                                <h4 class="card-title mt-2">Sukarelawan Perindu</h4>
+                                <p class="card-text">Dengan berbesar hati kami, barisan Jawatankuasa Perwakilan mengucapkan jutaan terimakasih kepada... </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#a" class="btn btn-outline-primary">Lebih lanjut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="component">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img" src="https://images.pexels.com/photos/3854615/pexels-photo-3854615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="aktiviti">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge badge-danger">Aktiviti</span>
+                                <h4 class="card-title mt-2">Perindu's Ramadhan with SYAMEL</h4>
+                                <p class="card-text">Dengan berbesar hati, barisan Jawatankuasa Perwakilan Kolej Perindu Untuk Bersama-sama menyeru warga perindu dalam Perindu's Ramadhan with Syameel</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#a" class="btn btn-outline-primary">Lebih Lanjut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="component">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img" src="https://images.pexels.com/photos/715134/pexels-photo-715134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="berita">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge badge-secondary">Berita</span>
+                                <h4 class="card-title mt-2">Sukarelawan Perindu</h4>
+                                <p class="card-text">Dengan berbesar hati kami, barisan Jawatankuasa Perwakilan mengucapkan jutaan terimakasih kepada... </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#a" class="btn btn-outline-primary">Lebih lanjut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="component">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img" src="https://images.pexels.com/photos/3854615/pexels-photo-3854615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="aktiviti">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge badge-danger">Aktiviti</span>
+                                <h4 class="card-title mt-2">Perindu's Ramadhan with SYAMEL</h4>
+                                <p class="card-text">Dengan berbesar hati, barisan Jawatankuasa Perwakilan Kolej Perindu Untuk Bersama-sama menyeru warga perindu dalam Perindu's Ramadhan with Syameel</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#a" class="btn btn-outline-primary">Lebih Lanjut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="component">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="card-img" src="https://images.pexels.com/photos/715134/pexels-photo-715134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="berita">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge badge-secondary">Berita</span>
+                                <h4 class="card-title mt-2">Sukarelawan Perindu</h4>
+                                <p class="card-text">Dengan berbesar hati kami, barisan Jawatankuasa Perwakilan mengucapkan jutaan terimakasih kepada... </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#a" class="btn btn-outline-primary">Lebih lanjut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--Dummy Data-->
+                    </div>
+                </div>
+                    <div class="col-md-3">
+                        <div class="linker">
+                            <div class="component">
+                                <div class="card text-center news-content">
+                                    <div class="card-header">
+                                        <i class="far fa-newspaper fa-3x"></i>
+                                        <h4>Pautan Berita UITM Hub</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#" title="go to uitm news hub" class="btn btn-lg btn-outline-primary">UITM News Hub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component">
+                            <div class="card text-center news-content">
+                                <div class="card-body">
+                                    <h4>Kategori</h4>
+                                    <span class="badge badge-danger">Aktiviti</span>
+                                    <span class="badge badge-danger">Aktiviti</span>
+                                    <span class="badge badge-danger">Aktiviti</span>
+                                    <span class="badge badge-danger">Aktiviti</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      
+      <div class="btn-group dropup stickymenu">
+            <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-align-right"></i>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#topPage">To Top</a>
+            </div>
+        </div>
+      
+    <footer class="bg-secondary pt-3 mt-5 pb-4">
+        <div class="container">
+            <div class="container-fluid">
+                <h5 class="mt-3">Hubungi Kami</h5>  
+                <p>Universiti Teknologi MARA Shah Alam <br>Jalan Sarjana 1/2,<br> 40450 Shah Alam,<br> Selangor</p>
+                <h5 class="mt-3">General Inquiries</h5>
+                <p>Phone: 03-5544 3633</p>
+                <h5 class="mt-5">Laman Sosial Kami</h5>
+                <div class="social d-flex flex-column">
+                    <div class="row">
+                    <div class="col">
+                        <i class="fab fa-instagram fa-2x mr-2"></i>
+                        <i class="fab fa-facebook-square fa-2x m-2"></i>
+                        <i class="fab fa-whatsapp fa-2x m-2"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+          <div class="copyright-section pt-3">
+            <div class="container">
+                <a class="text-white">Copyright &copy; Kolej Perindu 2020</a>
+            </div>
+          </div>
+      </footer>
+      <script src="js/effects.js" type="text/javascript"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+
+    <!-- optional plugins -->
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+    <!--   lazy javascript -->
+    <script src="./assets/js/lazy.js"></script>
+  </body>
+</html>

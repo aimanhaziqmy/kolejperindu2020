@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+    <a href="/admin/berita" class="btn btn-secondary mb-2 btn-block text-white"><i class="fas fa-reply"></i>&nbsp;Kembali</a>
+    <div class="card">
+        <div class='card-header'>
+            <h3>Berita Baharu</h3>
+        </div>
+    </div>
+
+    <div class='card'>
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="tajuk">Tajuk</label>
+                    <input type="text" placeholder="Tajuk" name="tajuk" id="tajuk" class='form-control' required>
+                </div>
+                <div class="form-group">
+                    <label for="penerangan">Penerangan</label>
+                    <input type="text" placeholder="Penerangan" name="penerangan" id="penerangan" class="form-control" required>
+                </div>
+                <div class='form-check'>
+                    <input type="checkbox" id='bolehDilihat' name="bolehDilihat" class="form-check-input" checked>
+                    <label class="form-check-label" for="bolehDilihat">Boleh dilihat ?</label>
+
+                </div>
+                <div class="form-group">
+                    <label for='gambar'>Gambar</label>
+                    <input type="file" id="gambar" name="gambar" class="form-control-file" required>
+                </div>
+                <div class='form-group'>
+                    <label for='kandungan'>Kandungan</label>
+                    <textarea id='kandungan' data-toolbar="full" rows="15" class='form-control' name='kandungan' required></textarea>
+                </div>
+                <button class='btn btn-block btn-primary' type='submit'> Hantar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#kandungan').summernote({
+            height: 300, //set editable area's height
+            codemirror: { // codemirror options
+                theme: 'monokai'
+            },
+
+
+        });
+    });
+
+</script>

@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Banner Aktiviti</h3>
+        </div>
+    </div>
+    <div class="card">
+        <div class='card-body'>
+            <h3>Tambah Banner</h3>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="tajuk">Tajuk :</label>
+                    <input type='text' class="form-control" name="tajuk" id="tajuk">
+                </div>
+                <div class="form-group">
+                    <label for="penerangan">Penerangan :</label>
+                    <input type="text" class="form-control" name="penerangan" id="penerangan">
+                </div>
+                <div class="form-group">
+                    <label for='gambar'>Gambar / Banner :</label>
+                    <input type="file" class="form-control-file" name="gambar" id="gambar" required>
+                </div>
+                <button class="btn btn-primary btn-block">&#43;&nbsp;Tambah Gambar / Banner</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <div class="row">
+            {{#each banner}}
+            <div class='col-md-6'>
+                <div class="card">
+                <img class="img-fluid card-img-top" src={{gambar}} alt="aktiviti Kolej Perindu">
+                    <div class="card-body">
+                        <h4>{{tajuk}} <small class="text-info">#index : {{@index}}</small></h4>
+                        <p class="lead">{{penerangan}}</p>
+                         <form class="m-2" action="/admin/banner/padam/{{_id}}?newMethod=DELETE" method="post">
+                            <button onclick="return confirm('Adakah anda ingin memadam kandungan ini?');" type="submit" class="btn btn-danger btn-block">Padam</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</div>

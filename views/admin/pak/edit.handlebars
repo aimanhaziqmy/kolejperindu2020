@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <a href="/admin/pak" class="btn btn-secondary mb-2 btn-block text-white"><i class="fas fa-reply"></i>&nbsp;Kembali</a>
+    <div class="card">
+        <div class="card-header">
+            <h3>Kemaskini Pengurus Asrama Kanan Kolej Perindu</h3>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <form method="post" action="/admin/pak/kemaskini/{{pak._id}}?newMethod=PUT" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <textarea id="nama" name="nama" placeholder="Nama" class="form-control" rows="1" required>{{pak.nama}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="penerangan">Pengenalan Diri</label>
+                    <textarea id="penerangan" name="pengenalan" placeholder="penerangan" class="form-control">{{pak.pengenalan}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="noTelefon">Nombor Telefon</label>
+                    <textarea id="noTelefon" name="noTelefon" placeholder="noTelefon" rows="1" class="form-control">{{pak.noTelefon}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="jawatan">Jawatan</label>
+                    <textarea id="jawatan" name="jawatan" placeholder="jawatan" class="form-control">{{pak.jawatan}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instagram">Instagram</label>
+                    <textarea id="instagram" name="instagram" placeholder="instagram" class="form-control">{{pak.instagram}}</textarea>
+                </div>
+                <div class='form-group'>
+                    <label for="harijadi">Tarikh Lahir</label>
+                    <input type="date" id="harijadi" name="harijadi" placeholder="harijadi" class="form-control" value={{pak.harijadi}}>
+                </div>
+                <div class="form-group">
+                    <label for="kataHikmah">Kata-kata Hikmah</label>
+                    <textarea id="kataHikmah" name="kataHikmah" placeholder="Kata-kata Hikmah" class="form-control">{{pak.kataHikmah}}</textarea>
+                </div>
+                <button type='submit' class='btn btn-primary btn-block'>Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

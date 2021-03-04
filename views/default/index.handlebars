@@ -1,0 +1,168 @@
+{{#each home}}
+    {{#if aktif}}
+        {{#if gambar}}
+            <div class="perindu-background-home">
+                <div class="container">
+                    <div class="site-content">
+                        <div class="d-flex">
+                            <div class="d-flex flex-column text-left">
+                                <h1 class="site-title">{{title}}</h1>
+                                <div id="typed-strings">
+                                    <p>{{description}}</p>
+                                </div>
+                                <div class="pstand">
+                                    <p id="typed" class="site-desc lead"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style type="text/css" scoped>
+                .perindu-background-home {
+
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+                    url('{{fail}}');
+                    -webkit-background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+                    url('{{fail}}');
+                }
+            </style>
+        {{/if}}
+        {{#if video}}
+            <header>
+                <div class="overlay"></div>
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src={{fail}} type="video/mp4" />
+                </video>
+                <div class="container h-100">
+                    <div class="d-flex h-100 text-center align-items-center">
+                        <div class="w-100 text-white textHeader">
+                            <h1 class="display-3 text-white">{{title}}</h1>
+                            <div id="typed-strings">
+                                <p>{{description}}</p>
+                            </div>
+
+                            <p class="lead mb-0"><span style="color:transparent;">|</span><span id="typed"></span></p>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+        {{/if}}
+    {{/if}}
+{{/each}}
+<!-- Aktiviti Perindu Content Swipe-->
+<div class="aktiviti-carousel mt-5 mb-5">
+    <div class="container">
+        <div class="page-desc">
+            <h3 class="text-center" id="to1"><span class="badge badge-danger">AKTIVITI</span></h3>
+            <h1 class="text-center">Aktiviti Perindu</h1>
+            <p class="text-center">Ketahui aktiviti yang akan dianjuarkan Kolej Perindu</p>
+        </div>
+        <div id="aktiviti-carousel" class="carousel slide mt-5 mb-5 m-0" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {{#each banner}}
+                    {{#if @first}}
+                        <li data-target="#aktiviti-carousel" data-slide-to={{@index}} class="active"></li>
+                    {{else}}
+                        <li data-target="#aktiviti-carousel" data-slide-to={{@index}}></li>
+                    {{/if}}
+                {{/each}}
+            </ol>
+            <div class="carousel-inner">
+                {{#each banner}}
+                    {{#if @first}}
+                        <div class="carousel-item active">
+
+                            <img class="img-fluid" src={{gambar}} alt="First slide">
+                            <div class="carousel-caption">
+                                <a href={{gambar}} download>
+                                    <h5>{{tajuk}}</h5>
+                                    <p>{{penerangan}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    {{else}}
+                        <div class="carousel-item">
+
+                            <img class="img-fluid" src={{gambar}} alt="Second slide">
+                            <div class="carousel-caption">
+                                <a href={{gambar}} download>
+                                    <h5>{{tajuk}}</h5>
+                                    <p>{{penerangan}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            </div>
+            <a class="carousel-control-prev" href="#aktiviti-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#aktiviti-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Perindu news content -->
+<div class="news-content pt-4 pb-4 bg-light">
+    <div class="container">
+        <div class="page-desc">
+            <h3 class="text-center" id="to2"><span class="badge badge-danger">BERITA</span></h3>
+            <h1 class="text-center">Berita Perindu</h1>
+            <p class="text-center">Ketahui perkembangan semasa</p>
+        </div>
+
+        <div class="row berita-items">
+            <!--Dummy Data-->
+            {{#each berita}}
+                <div class="col-md-4 item">
+                    <div class="component">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <img class="card-img" src={{gambar}} alt="berita">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge badge-secondary">Berita</span>
+                                <h4 class="card-title mt-2">{{tajuk}}</h4>
+                                <p class="card-text">{{penerangan}} </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/berita/{{_id}}" class="btn btn-outline-primary">Lebih Lanjut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+
+
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <nav aria-label="Page pagination">
+                <ul class="pagination">
+                    <li style="display:none" class="page-item prev"><span class="btn btn-secondary page-link text-white">&laquo;</span>
+                    </li>
+                    <li class="page-item"><a href="/berita"><span class="page-link btn btn-secondary-outline text-secondary">Pergi ke Hub Berita&nbsp;<span style="display:none" class="num"></span></span></a></li>
+                    <li style="display:none" class="page-item next"><span class="btn btn-secondary text-white page-link">&raquo;</span></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+</div>
+<div class="btn-group dropup stickymenu">
+    <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-right"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#to1">Aktiviti</a>
+        <a class="dropdown-item" href="#to2">Akrib Berita</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#topPage">To Top</a>
+    </div>
+</div>

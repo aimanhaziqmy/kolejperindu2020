@@ -1,0 +1,39 @@
+<!-- your content here -->
+<div class="container topspace">
+    <div class="page-desc mt-4">
+        <h3 class="text-center"><span class="badge badge-danger">E-Semak</span></h3>
+        <h1 class="text-center">Semak Merit Pelajar</h1>
+        <p class="text-center">Ketahui Merit Semasa Pelajar</p>
+    </div>
+</div>
+<div class="container pb-3">
+    <div class="card">
+        <div class="card-header">
+            <h3>E-Pelajar Kolej Perindu</h3>
+        </div>
+    </div>
+    <table data-toggle='table' data-search="true" data-pagination="true" data-show-columns="true">
+        <thead>
+            <tr>
+                <th data-field="noMatrik" data-sortable="true">Nombor Matrik</th>
+                <th data-field="jumlahAktiviti" data-sortable="true">Jumlah Aktiviti</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each pelajar}}
+                <tr>
+                    <td>{{noMatrik}}</td>
+                    <th>{{rekod.length}}</th>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<div class="btn-group dropup stickymenu">
+    <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-right"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#topPage">To Top</a>
+    </div>
+</div>

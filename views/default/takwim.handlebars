@@ -1,0 +1,37 @@
+<!-- your content here -->
+<div class="container topspace">
+    <div class="page-desc mt-4">
+        <div class="page-desc mt-5">
+            <h3 class="text-center"><span class="badge badge-danger">TAKWIM</span></h3>
+            <h1 class="text-center">TAKWIM AKTIVITI KOLEJ PERINDU</h1>
+            <p class="text-center">Ketahui Aktiviti Yang Dilakukan Kolej Perindu</p>
+        </div>
+    </div>
+</div>
+<div class="container pb-3">
+    <div class="component">
+        <div class="card text-center mt-3">
+            <div class="card-header">
+                <h2>Takwim Kolej Perindu</h2>
+                <p class="lead">Lihat dan Muat Turun Dokumen</p>
+            </div>
+            {{#each takwim}}
+                <div class="card-body">
+                    <p>Tarikh Dimuat naik : {{tarikh}}</p>
+                    <a class="btn btn-outline-primary img-fluid" href={{file}} download>
+                        Muat turun takwim
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
+<div class="btn-group dropup stickymenu">
+    <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-align-right"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#topPage">To Top</a>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<!-- your content here -->
+<div class="container topspace">
+    <div class="page-desc mt-4">
+        <h3 class="text-center"><span class="badge badge-danger">Portal Aduan Online</span></h3>
+        <h1 class="text-center">E-Aduan</h1>
+        <p class="text-center">Selamat Datang ke Borang Aduan Online Kolej Perindu</p>
+    </div>
+</div>
+<div class="container pb-3">
+    <div class="component">
+        <div class="card mt-3">
+            <div class="card-header mt-3 text-center">
+                <p class="lead">Sila isi dan penuhkan maklumat di bawah</p>
+            </div>
+            <div class="card-body">
+                <form method="post" id="aduan" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="tajukaduan" class="label-control">Tajuk Aduan </label>
+                        <input type="text" name="tajuk" class="form-control" id="tajukaduan" aria-describedby="penerangan" placeholder="Tajuk / Ringkasan Aduan" required>
+                        <small id="penerangan" class="form-text text-info">Ringkaskan Aduan Anda</small>
+                    </div>
+                    <div class="p-2 bg-light">
+                        <p>Masukkan gambar :<br><small class="text-info">*Jika ada.<br>*Masukkan gambar mengikut turutan.</small></p>
+
+                        <div class="form-group">
+                            <label for='gambar1'>Gambar Pertama</label>
+                            <input type="file" id="gambar1" name="gambar1" class="form-control-file">
+                        </div>
+                        <div class="form-group">
+                            <label for='gambar2'>Gambar Kedua</label>
+                            <input type="file" id="gambar2" name="gambar2" class="form-control-file">
+                        </div>
+                        <div class="form-group">
+                            <label for='gambar3'>Gambar Ketiga</label>
+                            <input type="file" id="gambar3" name="gambar3" class="form-control-file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="penerangan">Penerangan</label>
+                        <textarea name="penerangan" type="text" class="form-control" id="penerangan" placeholder="Terangkan aduan anda secara terperinci" rows="5" required></textarea>
+                        <small class="form-text text-info">Dimana? Apakah yang terjadi ?</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="pengadu">Ringkasan Tentang Pengadu</label>
+                        <textarea name="ringkasanPengadu" type="text" rows="3" class="form-control" id="pengadu" placeholder="Ringkasan tentang pengadu / Siapakah pengadu ?" required></textarea>
+                    </div>
+                    <button type="submit" value="verify" class="mb-3 mt-3 btn btn-block btn-primary">Hantar</button>
+                </form>
+               
+            </div>
+        </div>
+    </div>
+    <div class="btn-group dropup stickymenu">
+        <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-align-right"></i>
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#topPage">To Top</a>
+        </div>
+    </div>
+</div>
+<script>
+    aduan.onsubmit = function(){
+        Progression();
+        Wrapping();
+    }
+</script>

@@ -1,0 +1,244 @@
+html,body{
+    overflow-x: hidden;
+}
+
+.topspace{
+    padding-top: 6.5%;
+}
+
+.crimson{
+    background:#DC143C;
+}
+
+.perindu-background-home{
+    padding-top: 20%;
+    display: block;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url('../static%20pictures/home-picture.jpg');
+    -webkit-background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url('../static%20pictures/home-picture.jpg');
+    background-position:center;
+    background-size:cover;
+    overflow-x:hidden;
+    position: relative;
+    background-attachment:fixed;
+}
+
+.site-title{
+    color:white;
+    margin-top:;
+    margin-bottom:1%;
+    font-family: 'Fjalla One', sans-serif;
+    font-size:60px;
+}
+
+.site-desc{
+    color:white;
+    font-size:24px;
+    margin-bottom:1%;
+    font-family: 'Fjalla One', sans-serif;
+    padding-bottom: 35%;
+}
+
+.news-content{
+    margin-top: 3%;
+}
+
+.news-content .component .card{
+    height:100%;
+    margin:1%;
+}
+
+footer p,footer h5{
+    color:white;
+}
+
+footer i{
+    background-color:white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.copyright-section{
+    text-decoration:none;
+    text-align: center;
+}
+
+.copyright-section a{
+    cursor: pointer;
+}
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.show .dropdown-menu { 
+    max-height: 500px;
+    opacity: 1;
+}
+/*Aktiviti carousel*/
+.aktiviti-carousel img{
+    border-radius: 8px;
+}
+.aktiviti-carousel h5, .aktiviti-carousel .carousel-caption p{
+    color:white;
+    text-shadow: 2px 2px 3px black;
+}
+/*This is for sticky button located at right bottom*/
+.stickymenu{
+    position:fixed;
+    top:85%;
+    left: 85%;
+    margin:2%;
+}
+/*Kata kunci admin special*/
+.darkside{
+    color:white;
+    padding: 5px 15px;
+    margin: 10px;
+    border-radius: 7px;
+}
+/*slideanim*/
+
+.slideanim{
+    visibility: hidden;
+}
+        
+.slide{
+    animation-name:slide;
+    -webkit-animation-name:slide;
+    -moz-animation-name:slide;
+    -ms-animation-name:slide;
+    -o-animation-name:slide;
+    animation-duration: 1s;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -ms-animation-duration:1s;
+    -o-animation-duration:1s;
+    visibility:visible;
+}
+/*For non-mobile websites only*/
+@media screen and (min-width:769px){
+    .dropdown:hover .dropdown-menu{
+        opacity: 1;
+        max-height: 500px;
+    }
+    .nav-mobile{
+        display:none;
+    }
+}
+/*For medium-large websites*/
+@media screen and (max-width:1024px){
+    .topspace{
+        padding-top: 8.5%;
+    }
+}
+/*For Tablets responsiveness*/
+@media screen and (max-width:768.5px){
+    .nav-mobile{
+        display: inline-block;
+    }
+    .topspace{
+        padding-top: 12.5%;
+    }
+    .perindu-background-home{
+        padding-top: 35%;
+    }
+    .perindu-background-home .site-title{
+        font-size: 45px;
+    }
+    .perindu-background-home .site-desc{
+        padding-bottom: 40%;
+        font-size: 22px;
+    }
+}
+/*For mobile phone responsiveness*/
+@media screen and (max-width:426px)
+{
+    .topspace{
+        padding-top: 25%;
+    }
+    .perindu-background-home{
+        padding-top: 90%;
+    }
+    .perindu-background-home .site-title{
+        font-size: 40px;
+        text-align: center;
+    }
+    .perindu-background-home .site-desc{
+        padding-bottom: 60%;
+        font-size: 20px;
+        text-align: center;
+    }
+    .stickymenu{
+        position:fixed;
+        top:90%;
+        left: 80%;
+        margin:2%;
+    }
+}
+
+/*Animation*/
+@keyframes slide{
+    0%{
+    opacity:0;
+    transform:translateY(70%);
+    }
+    100%{
+    opacity:1;
+    transform: translateY(0%);
+    }
+    }
+            
+@-webkit-keyframes slide{
+    0%{
+        opacity:0;
+        transform:translateY(70%);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+
+@-moz-keyframes slide{
+    0%{
+        opacity:0;
+        transform:translateY(70%);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+
+@-ms-keyframes slide{
+    0%{
+        opacity:0;
+        transform:translateY(70%);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+
+@-o-keyframes slide{
+    0%{
+        opacity:0;
+        transform:translateY(70%);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
+

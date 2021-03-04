@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h3>Lihat dan kemaskini carta organisasi</h3>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <table data-toggle='table' data-search="true" data-pagination="true" data-show-columns="true">
+                <thead>
+                    <tr>
+                        <th data-field="tarikh" data-sortable="true">Tarikh Kemaskini</th>
+                        <th data-field="file" data-sortable="true">Fail dimuatnaik</th>
+                        <th>Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each cartaOrganisasi}}
+                        <tr>
+                            <td>{{tarikh}}</td>
+                            <td>{{file}}</td>
+                            <td>
+                                <form class="m-2" action="/admin/cartaOrganisasi/padam/{{_id}}?newMethod=DELETE" method="post">
+                                    <button onclick="return confirm('Adakah anda ingin memadam kandungan ini?');" type="submit" class="btn btn-danger btn-block">Padam</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class='card-body'>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for='file'>Fail dimuat naik :</label>
+                    <input type="file" id="file" name='file' class="form-control-file" required>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Hantar</button>
+            </form>
+        </div>
+    </div>
+</div>

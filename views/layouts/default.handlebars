@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>default/header}}
+
+<body id="topPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!--navbar top-->
+    <div class="position-fixed container-fluid hideprogress" id="progression" style="z-index:999; top:40%;">
+        <div class="alert mx-auto alert-info alerts pb-2" role="alert">
+            <p>Sila tunggu sebentar...</p>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-style="width: 100%;" aria-valuenow="0" valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+    {{>default/top-navigation}}
+    {{>default/message}}
+    <div id="wrapper">
+    {{{body}}}
+    
+    {{#if user}}
+        <div class="stickyadmin">
+            <a href="/admin" class="btn btn-dark text-white"><i class="fas fa-users-cog fa-lg"></i>&nbsp;&raquo;&raquo;</a>
+        </div>
+    {{/if}}
+    {{>default/footer}}
+    </div>
+</body>
+    
+</html>

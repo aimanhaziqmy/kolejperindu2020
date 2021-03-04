@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h2>Catatan Pengguna</h2>
+        </div>
+    </div>
+    <table data-toggle='table' data-search="true" data-pagination="true" data-show-columns="true">
+        <thead>
+            <tr>
+                <th data-field="tajuk" data-sortable="true">Catatan Pengguna</th>
+                <th>Tindakan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each catat}}
+                <tr>
+                    <td>{{{catatan}}}</td>
+                    <td>
+                        <form class="m-2" action="/admin/catatan/padam/{{_id}}?newMethod=DELETE" method="post">
+                            <button onclick="return confirm('Adakah anda ingin memadam kandungan ini?');" type="submit" class="btn btn-danger btn-block">Padam</button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div class="card">
+        <div class="card-body">
+            <h3>Catatan Baharu</h3>
+            <form method="post">
+                <div class="form-group">
+                    <label for="catatan">Catatan Baharu</label>
+                    <textarea id="catatan" name="catatan" rows="5" class="form-control" placeholder="Catat"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Hantar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#catatan').summernote({
+            height: 300, //set editable area's height
+            codemirror: { // codemirror options
+                theme: 'monokai'
+            }
+        });
+    });
+
+</script>

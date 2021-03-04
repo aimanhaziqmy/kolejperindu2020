@@ -1,0 +1,67 @@
+<!-- your content here -->
+<div class="bg-dark">
+    <div class="container topspace">
+        <div class="page-desc mt-4">
+            <h3 class="text-center"><span class="badge badge-danger"><i class="fas fa-user-lock"></i>&nbsp;ADMIN</span></h3>
+            <h1 class="text-center text-white">Admin Login</h1>
+            <p class="text-center text-white">Log Masuk Ke Portal Admin</p>
+        </div>
+    </div>
+    <div class="container pb-3">
+        <div class="component">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center mt-3"><i class="fas fa-user-lock"></i>&nbsp;Login</h1>
+                    <h5 class="text-center">Pastikan Maklumat anda Tepat</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="email" class="form-control" name="email" aria-describedby="emailinfo" required>
+                            <small id="emailinfo" class="form-text text-info">Perlu diisi</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Kata Laluan</label>
+                            <input type="password" name="password" id="password" placeholder="Kata Laluan" class="form-control" aria-describedby="katalaluan" required>
+                            <small id="katalaluan" class="form-text text-info">Perlu diisi</small>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-outline-primary">Log Masuk</button>
+                        <p class="text-center mt-3">*Link daftar Admin <button type="button" class="m-2 btn btn-dark" data-toggle="modal" data-target="#daftarinfo">Daftar Admin</button></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group dropup stickymenu">
+        <button type="button" class="btn btn-secondary dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-align-right"></i>
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#topPage">To Top</a>
+        </div>
+    </div>
+
+    <div class="modal fade mt-5" id="daftarinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog mt-5" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Daftar Pengguna Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <li>Hanya yang diberikan <strong>Admin Key</strong> sahaja dibolehkan untuk daftar Admin.</li>
+                    <li>Hanya Jawatan berkaitan Kolej Perindu sahaja boleh memohon Admin Key.</li>
+                    <li>Admin Key boleh dimohon dengan Webmaster.</li>
+                    <p class="lead mt-3"><strong>Ke laman </strong><a class="btn btn-dark" href="/register">Daftar Admin</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

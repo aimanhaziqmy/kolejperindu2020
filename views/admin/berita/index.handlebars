@@ -1,0 +1,41 @@
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Akrib Berita Perindu</h3>
+        </div>
+    </div>
+    <a href="/admin/berita/baharu" class="btn btn-primary mt-2 mb-2 btn-block text-white"><i class="fas fa-plus-circle"></i>&nbsp;Tambah Maklumat</a>
+    <table data-toggle='table' data-search="true" data-pagination="true" data-show-columns="true">
+        <thead>
+            <tr>
+                <th data-field="tajuk" data-sortable="true">Tajuk</th>
+                <th data-field="penerangan" data-sortable="true">Penerangan</th>
+                <th data-field="gambar" data-sortable="true">Gambar</th>
+                <th data-field="kandungan" data-sortable="true" data-visible="false">Kandungan</th>
+                <th data-field="tarikh" data-sortable="true">Tarikh</th>
+                <th>Tindakan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each beritas}}
+                <tr>
+                    <td>{{tajuk}}</td>
+                    <td>{{penerangan}}</td>
+                    <td><img src={{gambar}} class="img-fluid" alt="berita kolej perindu"></td>
+                    <td>{{{kandungan}}}</td>
+                    <td>{{tarikh}}</td>
+                    <td><a class="btn btn-block btn-warning m-2" href="/admin/berita/kemaskini/{{_id}}">Kemaskini</a>
+                        <form class="m-2" action="/admin/berita/padam/{{_id}}?newMethod=DELETE" method="post">
+                            <button onclick="return confirm('Adakah anda ingin memadam kandungan ini?');" type="submit" class="btn btn-danger btn-block">Padam</button>
+                        </form>
+                    </td>
+
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+
+</div>
