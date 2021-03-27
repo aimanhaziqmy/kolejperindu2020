@@ -32,7 +32,7 @@
                         <tr>
                             <td>{{nama}}</td>
                             <td>{{noMatrik}}</td>
-                            <td>{{blokPerindu}}</td>
+                            <td>{{noBilik}}</td>
                             <td>{{rekod.length}}</td>
                             <td>
                                 <a class="btn btn-warning m-2" href="/admin/pelajar/kemaskini/{{_id}}">Kemaskini</a>
@@ -92,12 +92,7 @@
                 <button type="submit" class="btn btn-block btn-primary">Hantar</button>
             </form>
         </div>
-    </div>{
-    extend: 'pdfHtml5',
-    exportOptions: {
-    columns: [ 0, 1, 2, 5 ]
-    }
-    },
+    </div>
 </div>
 <script>
     $(document).ready(function() {
@@ -105,25 +100,25 @@
             buttons: [{
                     extend: 'copy',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3],
                     }
                 },
                 {
                     extend: 'excel',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3],
                     },
                 },
                 {
                     extend: 'print',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3],
                     },
                 },
                 {
                     extend: 'pdf',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3],
                     },
                 },
                 'colvis',
@@ -136,9 +131,6 @@
                 },
                 {
                     'data': 'NoBilik'
-                },
-                {
-                    'data': 'BlokPerindu'
                 },
                 {
                     'data': 'NoAktiviti'
